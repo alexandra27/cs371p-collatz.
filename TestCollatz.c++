@@ -78,7 +78,7 @@ TEST(Collatz, eval_4) {
     const int v = collatz_eval(900, 1000);
     ASSERT_EQ(174, v);}
 
-Test(CollatzTEST(Collatz, backwards) {
+TEST(Collatz, backwards) {
     const int v = collatz_eval(1000, 900);
     ASSERT_EQ(174, v);}
 
