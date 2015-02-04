@@ -85,11 +85,11 @@ TEST(Collatz, backwards) {
 TEST(Collatz, ones) {
     const int v = collatz_eval(1, 1);
     ASSERT_EQ(1, v);}
-/*
+
 TEST(Collatz, equalPairs) {
     const int v = collatz_eval(10, 10);
-    ASSERT_EQ(20, v);
-*/
+    ASSERT_EQ(20, v);}
+
 
 // -----
 // print
