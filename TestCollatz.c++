@@ -33,7 +33,30 @@ TEST(Collatz, read) {
     string s("1 10\n");
     const pair<int, int> p = collatz_read(s);
     ASSERT_EQ( 1, p.first);
-    ASSERT_EQ(10, p.second);}
+    ASSERT_EQ(10, p.second);
+}
+
+TEST(Collatz, extraSpace){
+    string s("14        15\n");       
+    const pair<int, int> p = collatz_read(s);
+    ASSERT_EQ(14, p.first); 
+    ASSERT_EQ(15, p.second); 
+}
+
+TEST(Collatz, notOrder){
+    string s("50 35\n");
+    const pair<int, int> p = collatz_read(s);
+    ASSERT_EQ(50, p.first);
+    ASSERT_EQ(35, p.second);
+}
+
+TEST(Collatz, intsSeperated){
+    string s("50 \n35\n");       
+    const pair<int, int> p = collatz_read(s);
+    ASSERT_EQ(50, p.first); 
+    ASSERT_EQ(35, p.second); 
+}
+
 
 // ----
 // eval
@@ -55,6 +78,19 @@ TEST(Collatz, eval_4) {
     const int v = collatz_eval(900, 1000);
     ASSERT_EQ(174, v);}
 
+Test(CollatzTEST(Collatz, backwards) {
+    const int v = collatz_eval(1000, 900);
+    ASSERT_EQ(174, v);}
+
+TEST(Collatz, ones) {
+    const int v = collatz_eval(1, 1);
+    ASSERT_EQ(1, v);}
+/*
+TEST(Collatz, equalPairs) {
+    const int v = collatz_eval(10, 10);
+    ASSERT_EQ(20, v);
+*/
+
 // -----
 // print
 // -----
@@ -64,6 +100,17 @@ TEST(Collatz, print) {
     collatz_print(w, 1, 10, 20);
     ASSERT_EQ("1 10 20\n", w.str());}
 
+TEST(Collatz, backwardsInput) {
+    ostringstream w;
+    collatz_print(w, 10, 1, 20);
+    ASSERT_EQ("10 1  20\n", w.str());}
+
+TEST(Collatz, sameInput) {
+    ostringstream w;
+    collatz_print(w, 1, 1, 1);
+    ASSERT_EQ("1 1 1\n", w.str());}
+
+
 // -----
 // solve
 // -----
@@ -72,7 +119,26 @@ TEST(Collatz, solve) {
     istringstream r("1 10\n100 200\n201 210\n900 1000\n");
     ostringstream w;
     collatz_solve(r, w);
-    ASSERT_EQ("1 10 1\n100 200 1\n201 210 1\n900 1000 1\n", w.str());}
+    ASSERT_EQ("1 10 20\n100 200 125\n201 210 89\n900 1000 174\n", 
+w.str());}
+
+TEST(Collatz, backwardPairs) {
+    istringstream r("10 1\n200 100\n210 201\n900 1000\n");
+    ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_EQ("10 1 20\n200 100 125\n210 201 89\n1000 900 174\n",
+w.str());}
+
+TEST(Collatz, onlyOne) {
+    istringstream r("10 1\n");
+    ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_EQ("10 1 20\n",
+w.str());}
+
+
+
+    
 
 /*
 % ls -al /usr/include/gtest/
