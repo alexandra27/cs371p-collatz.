@@ -37,6 +37,7 @@ pair<int, int> collatz_read (const string& s) {
 
 int collatz_eval (int i, int j)
 {
+
     int max = 0;
 
     int count= 0;
@@ -55,6 +56,9 @@ int collatz_eval (int i, int j)
         larger = i;
         smaller = j;
     }
+
+    assert(smaller <= larger);
+
     for(int current = smaller; current < larger+1; current++)
     {
         temp = current;
@@ -66,15 +70,19 @@ int collatz_eval (int i, int j)
                 copyOfTemp = temp;
                 temp = temp/2;
                 
-		if(temp > 0 && temp < 900000 && copyOfTemp > 0 && copyOfTemp < 900000){
-                if(cache[temp] != 0)
+		        if(temp > 0 && temp < 900000 && copyOfTemp > 0 && copyOfTemp < 900000)
                 {
-                    count += cache[temp];
-                    break;
+                    assert(temp > 0);
+                    assert(copyOfTemp > 0);
+
+                    if(cache[temp] != 0)
+                    {
+                        count += cache[temp];
+                        break;
+                    }
+                     else
+                        cache[copyOfTemp] = collatz_eval(temp, temp) +1 ;
                 }
-                else
-                    cache[copyOfTemp] = collatz_eval(temp, temp) +1 ;
-		}
 
                 count++;
             }
@@ -83,15 +91,19 @@ int collatz_eval (int i, int j)
                 copyOfTemp = temp;
                 temp = 3*temp +1;
                 
-		if(temp > 0 && temp < 900000 && copyOfTemp > 0 && copyOfTemp < 900000){
-                if(cache[temp] != 0)
+		        if(temp > 0 && temp < 900000 && copyOfTemp > 0 && copyOfTemp < 900000)
                 {
-                    count += cache[temp];
-                    break;
-                }
-                else
-                    cache[copyOfTemp]= collatz_eval(temp, temp) + 1;
-		}
+                    assert(temp > 0);
+                    assert(copyOfTemp > 0);
+
+                    if(cache[temp] != 0)
+                    {
+                        count += cache[temp];
+                        break;
+                    }
+                    else
+                        cache[copyOfTemp]= collatz_eval(temp, temp) + 1;
+		        }
 
                 count++;
             }
@@ -101,6 +113,7 @@ int collatz_eval (int i, int j)
         {
             max = count;
         }
+        assert(max >= count);
     }
 
     return max;
