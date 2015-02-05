@@ -64,7 +64,7 @@ TEST(Collatz, intsSeperated){
 
 TEST(Collatz, eval_1) {
     const int v = collatz_eval(1, 10);
-    ASSERT_EQ(20, v);}
+    ASSERT_EQ(20,v);}
 
 TEST(Collatz, eval_2) {
     const int v = collatz_eval(100, 200);
@@ -88,7 +88,7 @@ TEST(Collatz, ones) {
 
 TEST(Collatz, equalPairs) {
     const int v = collatz_eval(10, 10);
-    ASSERT_EQ(20, v);}
+    ASSERT_EQ(7, v);}
 
 
 // -----
@@ -103,7 +103,7 @@ TEST(Collatz, print) {
 TEST(Collatz, backwardsInput) {
     ostringstream w;
     collatz_print(w, 10, 1, 20);
-    ASSERT_EQ("10 1  20\n", w.str());}
+    ASSERT_EQ("10 1 20\n", w.str());}
 
 TEST(Collatz, sameInput) {
     ostringstream w;
@@ -123,7 +123,7 @@ TEST(Collatz, solve) {
 w.str());}
 
 TEST(Collatz, backwardPairs) {
-    istringstream r("10 1\n200 100\n210 201\n900 1000\n");
+    istringstream r("10 1\n200 100\n210 201\n1000 900\n");
     ostringstream w;
     collatz_solve(r, w);
     ASSERT_EQ("10 1 20\n200 100 125\n210 201 89\n1000 900 174\n",
