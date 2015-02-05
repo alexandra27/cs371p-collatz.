@@ -65,6 +65,8 @@ int collatz_eval (int i, int j)
             {
                 copyOfTemp = temp;
                 temp = temp/2;
+                
+		if(temp > 0 && temp < 900000 && copyOfTemp > 0 && copyOfTemp < 900000){//LINE ADDED
                 if(cache[temp] != 0)
                 {
                     count += cache[temp];
@@ -72,6 +74,7 @@ int collatz_eval (int i, int j)
                 }
                 else
                     cache[copyOfTemp] = collatz_eval(temp, temp) +1 ;
+		}//LINE ADDED
 
                 count++;
             }
@@ -80,6 +83,7 @@ int collatz_eval (int i, int j)
                 copyOfTemp = temp;
                 temp = 3*temp +1;
                 
+		if(temp > 0 && temp < 900000 && copyOfTemp > 0 && copyOfTemp < 900000){//LINE ADDED
                 if(cache[temp] != 0)
                 {
                     count += cache[temp];
@@ -87,6 +91,7 @@ int collatz_eval (int i, int j)
                 }
                 else
                     cache[copyOfTemp]= collatz_eval(temp, temp) + 1;
+		}//LINE ADDED
 
                 count++;
             }
