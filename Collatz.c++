@@ -18,7 +18,7 @@
 
 using namespace std;
 
-int cache[1000001] = { };
+int cache[1000005] = { };
 
 // ------------
 // collatz_read
@@ -35,13 +35,13 @@ pair<int, int> collatz_read (const string& s) {
 // collatz_eval
 // ------------
 
-int collatz_eval (int i, int j) 
+int collatz_eval (int i, int j)
 {
-    
     int max = 0;
 
     int count= 0;
     int temp = i;
+    int copyOfTemp = temp;
 
     int larger;
     int smaller;
@@ -55,26 +55,40 @@ int collatz_eval (int i, int j)
         larger = i;
         smaller = j;
     }
-
     for(int current = smaller; current < larger+1; current++)
     {
         temp = current;
         count = 1;
-
         while(temp != 1)
         {
-
-        if(temp % 2 == 0)
+            if(temp % 2 == 0)
             {
+                copyOfTemp = temp;
                 temp = temp/2;
+                if(cache[temp] != 0)
+                {
+                    count += cache[temp];
+                    break;
+                }
+                else
+                    cache[copyOfTemp] = collatz_eval(temp, temp) +1 ;
+
                 count++;
-                cache[temp] = collatz_eval(temp, temp) +1 ;
             }
             else
             {
+                copyOfTemp = temp;
                 temp = 3*temp +1;
+                
+                if(cache[temp] != 0)
+                {
+                    count += cache[temp];
+                    break;
+                }
+                else
+                    cache[copyOfTemp]= collatz_eval(temp, temp) + 1;
+
                 count++;
-                cache[temp]= collatz_eval(temp, temp) + 1;
             }
         }
 
@@ -82,12 +96,12 @@ int collatz_eval (int i, int j)
         {
             max = count;
         }
-
     }
 
-    printf("%d\n",cache[34]);
+    //printf("%d\n",cache[34]);
     return max;
 }
+
 
 // -------------
 // collatz_print
