@@ -1,0 +1,119 @@
+commit 4c58e33e313f7c7be67749c484823a4ae0de0b84
+Author: alexandra27 <martinezalexandra_27@yahoo.com>
+Date:   Thu Feb 5 16:28:50 2015 -0600
+
+    Solution accepted by Sphere
+
+commit 4f6b8ca2faae6327d6ff1c229950a4d29e662812
+Author: alexandra27 <martinezalexandra_27@yahoo.com>
+Date:   Thu Feb 5 16:16:01 2015 -0600
+
+    Solution with asserts
+
+commit c786298c96d0a1724829dc8a3a1b6945dbfd9bdd
+Author: alexandra27 <martinezalexandra_27@yahoo.com>
+Date:   Thu Feb 5 15:55:16 2015 -0600
+
+    Finished
+
+commit c9f59a5f5b48ca1992aa446f52bf42c8316d45cf
+Author: alexandra27 <martinezalexandra_27@yahoo.com>
+Date:   Thu Feb 5 15:47:34 2015 -0600
+
+    Solution with cache accepted to Sphere
+
+commit e54ab2e114cc91a8f198dacec15d082138de82f9
+Author: alexandra27 <martinezalexandra_27@yahoo.com>
+Date:   Thu Feb 5 10:44:46 2015 -0600
+
+    Collatz accepted by spere with cache
+
+commit 86dcc8c56126be910cb8dbcf484e0eed65dfd592
+Author: alexandra27 <martinezalexandra_27@yahoo.com>
+Date:   Thu Feb 5 07:10:04 2015 -0600
+
+    Cache working for larger numbers
+
+commit 925697f1478d35526a60c3d4ad43fb9e256832d4
+Author: alexandra27 <martinezalexandra_27@yahoo.com>
+Date:   Thu Feb 5 06:25:58 2015 -0600
+
+    Collatz with cache working
+
+commit cc00e2d9e6042b058d1f1e33a46dcc758e64f726
+Author: alexandra27 <martinezalexandra_27@yahoo.com>
+Date:   Thu Feb 5 06:17:07 2015 -0600
+
+    TestCollatz.c++
+
+commit a8532bb327cc2c7ed975cb8cbf3602b2452357ed
+Author: alexandra27 <martinezalexandra_27@yahoo.com>
+Date:   Wed Feb 4 20:38:31 2015 -0600
+
+    just testing where I am pushing
+
+commit a05dc33bd73d7ebf524022dc95870b49a52bef81
+Author: alexandra27 <martinezalexandra_27@yahoo.com>
+Date:   Wed Feb 4 14:43:18 2015 -0600
+
+    Working on cache, still not working
+
+commit efd29704c7f1eac5533ee0f5ad51ca5379d5fa2c
+Author: alexandra27 <martinezalexandra_27@yahoo.com>
+Date:   Wed Feb 4 14:04:52 2015 -0600
+
+    simple solution to collatz_eval
+
+commit 922eacc1d68005ff2f9abb864ab1a3396a79cbac
+Author: alexandra27 <martinezalexandra_27@yahoo.com>
+Date:   Wed Feb 4 12:41:51 2015 -0600
+
+    Added one more unit test. Everything working
+
+commit 541124c0b134a523f7ea38f342675551e1942b8a
+Author: alexandra27 <martinezalexandra_27@yahoo.com>
+Date:   Wed Feb 4 00:01:11 2015 -0600
+
+    Added more unit tests. Compiling now
+
+commit 820cf6d01a8cc0050b1170ab1ca3b71cb95deb83
+Author: alexandra27 <martinezalexandra_27@yahoo.com>
+Date:   Tue Feb 3 23:45:15 2015 -0600
+
+    Added more unit Tests, not compiling
+
+commit 335e80b5806d15832a0e909eb9c6891cccfa295d
+Author: alexandra27 <martinezalexandra_27@yahoo.com>
+Date:   Tue Feb 3 22:32:53 2015 -0600
+
+    Fixed the given unit tests
+
+commit cd94c9ce874dd789f1a0a812e0ad900b1c8fd4c0
+Author: alexandra27 <martinezalexandra_27@yahoo.com>
+Date:   Tue Feb 3 21:59:09 2015 -0600
+
+    Added the 100 lines to RunCollatz.in.txt
+
+commit 495d097078b038e55798664738b7ea13103d0181
+Author: alexandra27 <martinezalexandra_27@yahoo.com>
+Date:   Mon Feb 2 19:28:39 2015 -0600
+
+    Pushing all files
+
+commit 3a443a0e1ea443c045315a57257054b8c41a302e
+Author: alexandra27 <martinezalexandra_27@yahoo.com>
+Date:   Mon Feb 2 19:25:00 2015 -0600
+
+    Ran RunCollatz.c++
+
+commit 1b5c09c94dfd3f62a2898193e02a67f3a291d759
+Author: alexandra27 <martinezalexandra_27@yahoo.com>
+Date:   Mon Feb 2 19:14:40 2015 -0600
+
+    first commit
+
+commit 93d9eacaf20e60b794c51d33e1a7eb9ce7bc4575
+Author: alexandra27 <martinezalexandra_27@yahoo.com>
+Date:   Sun Feb 1 20:00:30 2015 -0600
+
+    Initial commit
